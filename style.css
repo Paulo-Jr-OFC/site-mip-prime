@@ -1,0 +1,518 @@
+/*
+  CSS principal do site MIP Prime
+  - Layout escuro, moderno e responsivo
+  - Estilos para header, hero, seções, galeria de serviços, reviews, formulário, rodapé e botão de voltar ao topo
+*/
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #18191a; /* Fundo escuro */
+    color: #f5f5f5;      /* Texto claro */
+}
+
+/* Container centralizador para limitar largura do conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header fixo no topo com sombra */
+.header {
+    background: #111;
+    position: fixed; /* Fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    position: relative;
+}
+.logo {
+    height: 44px;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+}
+
+/* Navegação principal */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-list a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.nav-list a:hover {
+    background: #222;
+    color: #fff;
+}
+.nav-list a.ativo {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #c2daf4;
+}
+
+/* Seção Hero (destaque inicial com imagem de fundo) */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 120px 0 80px 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* Remover background-image */
+    background: none;
+}
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(35,37,38,0.85) 0%, rgba(65,67,69,0.85) 100%);
+    z-index: 2;
+}
+.hero h1, .hero p, .btn-hero {
+    position: relative;
+    z-index: 3;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+}
+.btn-hero {
+    background: #fff;
+    color: #18191a;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+.btn-hero:hover {
+    background: #e0e0e0;
+    color: #111;
+}
+
+/* Espaçamento do conteúdo principal para não ficar atrás do header */
+main {
+    margin-top: 80px;
+}
+
+/* Seções principais */
+.section {
+    padding: 64px 0;
+}
+.section-light {
+    background: #232526;
+    color: #f5f5f5;
+}
+.section-dark {
+    background: #18191a;
+    color: #e0e0e0;
+}
+.section h2 {
+    font-size: 2.1rem;
+    margin-bottom: 28px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+/* Centraliza o título da seção de serviços */
+.section-dark h2 {
+    text-align: center;
+}
+/* Centraliza o título da seção de reviews */
+.section-light h2 {
+    text-align: center;
+}
+
+/* Lista de serviços (pode ser removida se não quiser texto) */
+.servicos-lista {
+    list-style: disc inside;
+    font-size: 1.15rem;
+    color: #ccc;
+    padding-left: 20px;
+}
+
+/* Galeria de cartões de serviços */
+.servicos-galeria {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.servico-card {
+    background: #232526;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 32px 24px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.servico-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 24px;
+}
+.servico-card span {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+.servico-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.servico-card.destaque {
+    transform: scale(1.12) translateY(-12px);
+    box-shadow: 0 12px 40px 0 rgba(0,0,0,0.28), 0 2px 12px rgba(0,0,0,0.18);
+    z-index: 10;
+    border: 2px solid #c2daf4;
+}
+
+/* Seção de reviews/depoimentos */
+.reviews-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 24px;
+}
+.review {
+    background: #18191a;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 28px 32px;
+    max-width: 340px;
+    min-width: 240px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.review:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+.review span {
+    margin-top: 18px;
+    font-size: 0.98rem;
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+input, textarea {
+    padding: 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+input:focus, textarea:focus {
+    outline: 2px solid #0077ff;
+    border-color: #0077ff;
+}
+button {
+    background: #fff;
+    color: #18191a;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+button:hover {
+    background: #e0e0e0;
+    color: #111;
+}
+
+/* Rodapé */
+.footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 28px 0 16px 0;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+/* Botão de voltar ao topo */
+#btn-topo {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 64px;
+    height: 64px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn-topo svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+#btn-topo.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+#btn-topo:hover svg circle {
+    fill: #414345;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .hero {
+        padding: 80px 0 40px 0;
+    }
+    main {
+        margin-top: 120px;
+    }
+    .section {
+        padding: 36px 0;
+    }
+    #btn-topo {
+        bottom: 16px;
+        right: 16px;
+        width: 56px;
+        height: 56px;
+    }
+    #btn-topo svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+@media (max-width: 900px) {
+    .reviews-lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .review {
+        max-width: 95vw;
+        width: 100%;
+    }
+    .servicos-galeria {
+        gap: 18px;
+    }
+    .servico-card {
+        width: 180px;
+        padding: 18px 6px 10px 6px;
+    }
+    .servico-card img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+.servico-info {
+    background: #232526;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin-top: 18px;
+    padding: 18px 16px;
+    font-size: 1rem;
+    text-align: center;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 200px;
+    opacity: 1;
+}
+.servico-info[style*='display:none'] {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 16px;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.modal-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    transition: opacity 0.2s;
+}
+.modal-video-content {
+    background: #232526;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+    padding: 24px 24px 16px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95vw;
+    max-height: 90vh;
+}
+.modal-video video {
+    max-width: 80vw;
+    max-height: 60vh;
+    border-radius: 8px;
+    background: #000;
+}
+.modal-video-close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 2.2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+}
+.modal-video-close:hover {
+    color: #c2daf4;
+}
+@media (max-width: 700px) {
+    .modal-video-content {
+        padding: 8px 2vw 8px 2vw;
+    }
+    .modal-video video {
+        max-width: 98vw;
+        max-height: 40vh;
+    }
+}
+
+.trabalhos-galeria {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.trabalho-card {
+    background: #232526;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 18px 18px 12px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.trabalho-card img {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.trabalho-card span {
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+.trabalho-card:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+@media (max-width: 900px) {
+    .trabalhos-galeria {
+        gap: 18px;
+    }
+    .trabalho-card {
+        width: 95vw;
+        max-width: 340px;
+        padding: 10px 4px 8px 4px;
+    }
+    .trabalho-card img {
+        max-width: 95vw;
+        height: 120px;
+    }
+} 

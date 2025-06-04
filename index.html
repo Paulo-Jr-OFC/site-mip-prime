@@ -1,0 +1,134 @@
+<!-- Página inicial da MIP Prime -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados e importação de estilos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIP Prime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header fixo com logo e navegação -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html"><img src="images/logo.png" alt="Logo MIP Prime" class="logo"></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="ativo">Início</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="trabalhos.html">Trabalhos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Seção Hero: destaque inicial com imagem de fundo -->
+        <section id="home" class="hero">
+            <!-- Vídeo de fundo -->
+            <video class="hero-bg-video" src="videos/MIPvideo.mp4" autoplay muted loop playsinline></video>
+            <!-- Overlay escuro -->
+            <div class="hero-overlay"></div>
+            <!-- Conteúdo da hero -->
+            <h1>MIP Prime</h1>
+            <p>Soluções tecnológicas e profissionais para o seu negócio.</p>
+            <a href="contato.html" class="btn-hero">Fale Conosco</a>
+        </section>
+        <!-- Seção de Serviços com galeria de cartões -->
+        <section id="servicos" class="section section-dark">
+            <div class="container">
+                <!-- Título centralizado -->
+                <h2>Nossos Serviços</h2>
+                <!-- Lista de serviços (pode ser removida se não quiser texto) -->
+                <ul class="servicos-lista">
+                    
+                </ul>
+                <!-- Modal de vídeo para serviços -->
+                <div id="modal-video" class="modal-video" style="display:none;">
+                    <div class="modal-video-content">
+                        <span class="modal-video-close">&times;</span>
+                        <video id="video-servico" width="480" controls autoplay muted>
+                            <source src="" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                    </div>
+                </div>
+                <!-- Fim do modal de vídeo -->
+                <!-- Galeria de cartões de serviços -->
+                <div class="servicos-galeria">
+                    <!-- Cartão Consultoria -->
+                    <div class="servico-card" data-servico="consultoria">
+                        <img src="images/consultoria.png" alt="Consultoria">
+                        <span>Consultoria</span>
+                        <!-- Texto explicativo oculto -->
+                        <div class="servico-info" style="display:none;">
+                            Oferecemos consultoria especializada para impulsionar resultados, identificar oportunidades e solucionar desafios do seu negócio.
+                        </div>
+                    </div>
+                    <!-- Cartão Gestão -->
+                    <div class="servico-card" data-servico="gestao">
+                        <img src="images/gestao.png" alt="Gestão">
+                        <span>Gestão</span>
+                        <!-- Texto explicativo oculto -->
+                        <div class="servico-info" style="display:none;">
+                            Nossa gestão é focada em eficiência, inovação e acompanhamento próximo para garantir o sucesso de cada etapa do seu projeto.
+                        </div>
+                    </div>
+                    <!-- Cartão Treinamento -->
+                    <div class="servico-card" data-servico="treinamento">
+                        <img src="images/treinamento.png" alt="Treinamento">
+                        <span>Treinamento</span>
+                        <!-- Texto explicativo oculto -->
+                        <div class="servico-info" style="display:none;">
+                            Realizamos treinamentos práticos e personalizados para capacitar sua equipe e potencializar resultados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção de Reviews/Depoimentos -->
+        <section id="reviews" class="section section-light">
+            <div class="container">
+                <!-- Título centralizado -->
+                <h2>Reviews</h2>
+                <div class="reviews-lista">
+                    <!-- Review 1 -->
+                    <div class="review">
+                        <p>"A MIP Prime transformou nosso negócio! Profissionalismo e resultados."</p>
+                        <span>- Carmen Bastos</span>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review">
+                        <p>"Equipe dedicada e soluções inovadoras. Recomendo!"</p>
+                        <span>- Ieda Carvajal</span>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review">
+                        <p>"Serviço de alta qualidade e atendimento excelente."</p>
+                        <span>- Kevin M. </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé do site -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MIP Prime. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Importa o JS externo -->
+    <script src="script.js"></script>
+    <!-- Botão de voltar ao topo -->
+    <button id="btn-topo" title="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#232526"/>
+            <path d="M12 8L8 12H11V16H13V12H16L12 8Z" fill="#fff"/>
+        </svg>
+    </button>
+</body>
+</html> 
