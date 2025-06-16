@@ -1,6 +1,6 @@
 <!-- Página inicial da MIP Prime -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <!-- Metadados e importação de estilos -->
     <meta charset="UTF-8">
@@ -12,15 +12,16 @@
     <!-- Header fixo com logo e navegação -->
     <header class="header">
         <div class="container header-container">
-            <a href="index.html"><img src="images/logo.png" alt="Logo MIP Prime" class="logo"></a>
+            <a href="index.html"><img src="images/logo.png" alt="MIP Prime Logo" class="logo"></a>
+            <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="index.html#home" class="ativo">Início</a></li>
-                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#home" class="ativo">Home</a></li>
+                    <li><a href="index.html#servicos">Services</a></li>
                     <li><a href="index.html#reviews">Reviews</a></li>
-                    <li><a href="trabalhos.html">Trabalhos</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="trabalhos.html">Works</a></li>
+                    <li><a href="sobre.html">About</a></li>
+                    <li><a href="contato.html">Contact</a></li>
                     
                 </ul>
             </nav>
@@ -35,14 +36,14 @@
             <div class="hero-overlay"></div>
             <!-- Conteúdo da hero -->
             <h1>MIP Prime</h1>
-            <p>Soluções tecnológicas e profissionais para o seu negócio.</p>
-            <a href="contato.html" class="btn-hero">Fale Conosco</a>
+            <p>Technological and professional solutions for your business.</p>
+            <a href="contato.html" class="btn-hero">Contact Us</a>
         </section>
         <!-- Seção de Serviços com galeria de cartões -->
         <section id="servicos" class="section section-dark">
             <div class="container">
                 <!-- Título centralizado -->
-                <h2>Nossos Serviços</h2>
+                <h2>Our Services</h2>
                 <!-- Lista de serviços (pode ser removida se não quiser texto) -->
                 <ul class="servicos-lista">
                     
@@ -53,7 +54,7 @@
                         <span class="modal-video-close">&times;</span>
                         <video id="video-servico" width="480" controls autoplay muted>
                             <source src="" type="video/mp4">
-                            Seu navegador não suporta vídeo HTML5.
+                            Your browser does not support HTML5 video.
                         </video>
                     </div>
                 </div>
@@ -62,29 +63,29 @@
                 <div class="servicos-galeria">
                     <!-- Cartão Consultoria -->
                     <div class="servico-card" data-servico="consultoria">
-                        <img src="images/consultoria.png" alt="Consultoria">
-                        <span>Consultoria</span>
+                        <img src="images/consultoria.png" alt="Consulting">
+                        <span>Consulting</span>
                         <!-- Texto explicativo oculto -->
                         <div class="servico-info" style="display:none;">
-                            Oferecemos consultoria especializada para impulsionar resultados, identificar oportunidades e solucionar desafios do seu negócio.
+                            We offer specialized consulting to boost results, identify opportunities, and solve your business challenges.
                         </div>
                     </div>
                     <!-- Cartão Gestão -->
                     <div class="servico-card" data-servico="gestao">
-                        <img src="images/gestao.png" alt="Gestão">
-                        <span>Gestão</span>
+                        <img src="images/gestao.png" alt="Management">
+                        <span>Management</span>
                         <!-- Texto explicativo oculto -->
                         <div class="servico-info" style="display:none;">
-                            Nossa gestão é focada em eficiência, inovação e acompanhamento próximo para garantir o sucesso de cada etapa do seu projeto.
+                            Our management is focused on efficiency, innovation, and close monitoring to ensure the success of each stage of your project.
                         </div>
                     </div>
                     <!-- Cartão Treinamento -->
                     <div class="servico-card" data-servico="treinamento">
-                        <img src="images/treinamento.png" alt="Treinamento">
-                        <span>Treinamento</span>
+                        <img src="images/treinamento.png" alt="Training">
+                        <span>Training</span>
                         <!-- Texto explicativo oculto -->
                         <div class="servico-info" style="display:none;">
-                            Realizamos treinamentos práticos e personalizados para capacitar sua equipe e potencializar resultados.
+                            We conduct practical and personalized training to empower your team and enhance results.
                         </div>
                     </div>
                 </div>
@@ -98,17 +99,17 @@
                 <div class="reviews-lista">
                     <!-- Review 1 -->
                     <div class="review">
-                        <p>"A MIP Prime transformou nosso negócio! Profissionalismo e resultados."</p>
+                        <p>"MIP Prime transformed our business! Professionalism and results."</p>
                         <span>- Carmen Bastos</span>
                     </div>
                     <!-- Review 2 -->
                     <div class="review">
-                        <p>"Equipe dedicada e soluções inovadoras. Recomendo!"</p>
+                        <p>"Dedicated team and innovative solutions. Highly recommend!"</p>
                         <span>- Ieda Carvajal</span>
                     </div>
                     <!-- Review 3 -->
                     <div class="review">
-                        <p>"Serviço de alta qualidade e atendimento excelente."</p>
+                        <p>"High-quality service and excellent support."</p>
                         <span>- Kevin M. </span>
                     </div>
                 </div>
@@ -118,13 +119,13 @@
     <!-- Rodapé do site -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 MIP Prime. Todos os direitos reservados.</p>
+            <p>&copy; 2025 MIP Prime. All rights reserved.</p>
         </div>
     </footer>
     <!-- Importa o JS externo -->
     <script src="script.js"></script>
     <!-- Botão de voltar ao topo -->
-    <button id="btn-topo" title="Voltar ao topo">
+    <button id="btn-topo" title="Back to top">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="12" fill="#232526"/>
             <path d="M12 8L8 12H11V16H13V12H16L12 8Z" fill="#fff"/>

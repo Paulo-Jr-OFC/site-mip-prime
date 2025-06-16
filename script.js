@@ -80,4 +80,20 @@ document.addEventListener('DOMContentLoaded', function() {
             video.pause();
         }
     });
+
+    // --- Menu hambúrguer responsivo ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('mostrar');
+        });
+        // Fecha o menu ao clicar em um link (mobile)
+        navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                navList.classList.remove('mostrar');
+            });
+        });
+    }
 }); 

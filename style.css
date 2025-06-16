@@ -515,4 +515,84 @@ button:hover {
         max-width: 95vw;
         height: 120px;
     }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 4vw;
+  }
+  .logo {
+    height: 36px;
+    margin-bottom: 8px;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: flex-start;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+    padding: 12px 0 12px 0;
+    display: none;
+  }
+  .nav-list.mostrar {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  .hero {
+    padding: 60px 0 30px 0;
+    min-height: 40vh;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .btn-hero {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .servicos-galeria, .trabalhos-galeria {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .servico-card, .trabalho-card {
+    width: 95vw;
+    max-width: 340px;
+    padding: 10px 4px 8px 4px;
+  }
+  .servico-card img, .trabalho-card img {
+    width: 90px;
+    height: 90px;
+    max-width: 90vw;
+  }
+  .modal-video video {
+    max-width: 98vw;
+    max-height: 40vh;
+  }
+}
+
+/* Botão do menu hambúrguer (desktop: oculto) */
+.menu-toggle {
+  display: none;
 } 
