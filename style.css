@@ -253,6 +253,18 @@ main {
     font-style: italic;
 }
 
+.ceo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Adiciona borda arredondada se desejar */
+    width: 200px; /* Define um tamanho fixo, ajuste conforme necessário */
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
 /* Formulário de contato */
 form {
     display: flex;
@@ -596,3 +608,9 @@ button:hover {
 .menu-toggle {
   display: none;
 } 
+.section p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+/* Seção de Trabalhos Realizados */
